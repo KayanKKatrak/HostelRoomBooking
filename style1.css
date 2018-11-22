@@ -1,0 +1,108 @@
+* {
+    font-family: Helvetica;
+    color: Black;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ffffff;
+    padding: 0;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+fieldset {
+    width: 410px;
+    margin: 10px;
+    color: #ffffff;
+}
+
+legend {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+input {
+    width: 400px;
+    height: 30px;
+    margin: 3px;
+}
+
+textarea {
+    margin: 3px;
+}
+
+blockquote {
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.navbar {
+    margin: 0px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    font-size: 30px;
+}
+
+.container {
+    width: 80%;
+    margin: 10%;
+    padding: 0px 25px 25px;
+    width: 80%;
+    background: #ffffff;
+    box-shadow:
+        0px 0px 0px 5px rgba( 255,255,255,0.4 ),
+        0px 4px 20px rgba( 0,0,0,0.33 );
+    border-radius: 5px;
+    display: table;
+}
+
+#back {
+    position: fixed;
+    right: 15px;
+    top: 10px;
+    margin: 5px;
+    color: #ffffff;
+    font-size: 23px;
+}
+
+#regform {
+    position: absolute;
+    top: 60px;
+}
+
+#maintitle {
+    color: #ffffff;
+}
+
+#personal {
+}
+
+#parents {
+}
+
+#room {
+}
+
+#messname {
+    color: #ffffff;
+}
+
+.linktoregister {
+    font-size: 50px;
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+    background-color: #eeeeee;
+    border: 1px solid #000000;
+}

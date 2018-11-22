@@ -1,0 +1,40 @@
+#page-1
+{ height: 100%;
+  background-image:url("connectwork.png");
+  opacity: 70%;
+  font-family: helvetica ;
+}
+
+h1 {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+div.text1
+{ color: white;
+  font-family:arial;
+  font-size:20px;
+  position:absolute;
+  top:150px;
+}
+
+div.hbtn
+{
+    color: white;
+    font-family:arial;
+    font-size:20px;
+    position:relative;
+    left: 580px;
+    top: 200px;
+}
+
+.button1
+{
+  border-radius: 30%;
+  padding: 14px 40px;
+  background-color: #99cccc;
+  font-size: 15px;
+  color: #aa44ff;
+  border: 2px solid #ff0000;
+  float: top;
+}

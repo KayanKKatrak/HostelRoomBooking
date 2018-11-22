@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>
+           Register
+        </title>
+        <link rel="stylesheet" type="text/css" href="style1.css">
+        <style>
+            body {
+                background-image: url("peshostel.jpg");
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="maintitle">Register Yourself</h1>
+        <div class="navbar">
+            <a href="home.html" id="back">&larr;Back</a>
+        </div>
+        <div class="regform" id="regform">
+            <form method="POST" action="findfriends.php">
+               <div id="personal">
+                   <fieldset>
+                   <legend>Personal Details</legend>
+                      <input type="text" name="name" placeholder="Name" required autofocus><br />
+                      <input type="text" name="email" placeholder="Email" required><br />
+                      <input type="number" name="age" placeholder="Age" min="16" max="28" required><br />
+                      <input type="text" name="year" placeholder="Year" list="year" required><br />
+                      <input type="text" name="course" list="course" placeholder="Course" required><br />
+                   </fieldset>
+               </div>
+               <div id="parents">
+                   <fieldset>
+                   <legend>Parents Details</legend>
+                      <input type="text" name="pname" placeholder="Parent's Name" required><br />
+                      <input type="text" name="pcontact" placeholder="Phone" required><br />
+                      <input type="text" name="pemail" placeholder="Email" required><br />
+                      <textarea name="address" placeholder="Address" rows="4" cols="40" required></textarea>
+                   </fieldset>
+               </div>
+               <div id="room">
+                   <fieldset>
+                   <legend>Room Details</legend><br />
+                       <input type="text" name="block" placeholder="Block Name" list="block"><br />
+                       <h3 id="messname">Choose a Mess</h3><br />
+                       <input type="radio" name="mess" style="height:5px; width:5px">Hostel Mess<br />
+                       <input type="radio" name="mess" style="height:5px; width:5px">Aman Rasoi<br />
+                       <input type="radio" name="mess" style="height:5px; width:5px">Foodcourt<br />
+                   </fieldset>
+               </div>
+               <datalist id="block">
+                  <option>New Block</option>
+                  <option>New Block Annexe</option>
+                  <option>IT</option>
+                  <option>IH</option>
+                  <option>Mess</option>
+                  <option>MM</option>
+               </datalist>
+               <datalist id="year">
+                  <option>1st year</option>
+                  <option>2nd year</option>
+                  <option>3rd year</option>
+                  <option>4th year</option>
+                  <option>Post Grad</option>
+               </datalist>
+               <datalist id="course">
+                  <option>Bachelor of Technology</option>
+                  <option>Master of Technology</option>
+                  <option>Bachelor of Business Administration</option>
+                  <option>Master of Business Administration</option>
+                  <option>Bachelor of Design</option>
+                  <option>Bachelor of Architecture</option>
+                  <option>Master of Computer Applications</option>
+               </datalist>
+
+               <input type="submit" Value="Register">
+               <input type="reset" Value="Clear">
+
+            </form>
+        </div>
+    </body>
+</html>
