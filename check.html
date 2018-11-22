@@ -3,32 +3,36 @@
 
     <head>
 
-        <title>Find Roomies</title>
+        <title>Enter Email</title>
 
         <link rel="stylesheet" type="text/css" href="style1.css">
 
         <style>
             body {
-                background-image: url("friends.jpg");
-            }
-
-            #findfriends {
-                width: 600px;
-            }
-
-            #inputfriends {
-                margin: 20px;
+                background-image: url("status.jpeg");
             }
 
             h1 {
                 color: #000000;
             }
 
-            a {
+            #findfriends {
+                width: 800px;
+            }
+
+            #inputfriends {
+                margin: 20px;
+            }
+
+            #registerhere {
                 font-size: 20px;
                 float: right;
                 margin: 20px;
                 color: #000000;
+            }
+
+            #check {
+                width: 150px;
             }
         </style>
 
@@ -36,18 +40,19 @@
 
     <body>
 
-        <!--dropdown friends-->
+        <div class="navbar">
+            <a href="index.html" id="back" style="color:white">&larr;Back</a>
+        </div>
 
+        <!--dropdown friends-->
         <div class="container" id="findfriends">
-            <a href="thanks.php">Skip &#x27A0;</a>
-            <h1> Find Roomies </h1>
-            <form method="POST" action="thanks.php">
-                <input type="hidden" name="srcemail" value=<?php echo $_POST['email'];?>>
-                <h3> How it Works: </h3>
-                <p> Enter a friend's email ID and if that friend has
-                already registered, he'll be sent an invite to be your
-                roommate </p>
-                <input type="text" name="destemail" id="inputfriends" placeholder="Search for Friends" list="friends" /><br />
+            <div id="registerhere">
+                Haven't registered yet?<br />
+                <a href="register.html" style="color:blue">Register Here &#x27A0;</a>
+            </div>
+            <h3> Enter email ID </h3>
+            <form method="POST" action="status.php">
+                <input type="text" name="email" id="inputfriends" placeholder="Enter email ID" list="friends" /><br />
                 <datalist id="friends">
                     <?php
                         $domain = 'localhost:3306';
@@ -59,18 +64,23 @@
                         }
 
 
+                        /*if ($query = mysqli_prepare($conn, "select email from people;")) {
+                            mysqli_stmt_bind_param($query, "s", $_POST['email']);
+                            mysqli_stmt_execute($query);
+                            mysqli_stmt_bind_result($query, $friends);
+                            mysqli_stmt_close($query);
+                        }*/
+
                         $res = mysqli_query($conn, 'select email from people;');
 
                         while ($email = mysqli_fetch_assoc($res)) {
                             echo "<option>" . $email['email'] . "</option>";
                         }
 
-                        $res = mysqli_query($conn, "insert into people values('". $_POST['name'] . "', '" .  $_POST['email'] . "');");
-
                         mysqli_close($conn);
                     ?>
                 </datalist>
-                <input type="submit" value="Send Invite" /><br />
+                <input type="submit" id="check" value="Check" /><br />
             </form>
         </div>
 
